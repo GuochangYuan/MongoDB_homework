@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+  <div id="app">
+      
+    <el-container>
+  		<el-aside width="200px">
+           
+		    <el-menu :default-openeds="['1', '3']" class="bg">
+                    <div>
+                            <img src="index.png" class="img">
+                            <img src="index2.png" class="img">
+                        </div>
+                        
+
+      		    <el-submenu index="1">
+        		    <template slot="title"><i class="el-icon-message"></i>首页</template>
+      		    </el-submenu>
+
+                <el-submenu index="2">
+                    <template slot="title"><i class="el-icon-menu"></i>用户列表</template>
+                        <el-menu-item-group class="bg">
+                            <el-menu-item index="2-1" class="bg">选项1</el-menu-item>
+                            <el-menu-item index="2-2" class="bg">选项2</el-menu-item>
+                        </el-menu-item-group class="bg">
+
+                        <el-menu-item index="2-3" class="bg">选项3</el-menu-item>
+                        </el-menu-item-group>
+
+                </el-submenu>
+
+                <el-submenu index="3">
+                    <template slot="title"><i class="el-icon-setting"></i>图书管理</template>
+                        <el-menu-item-group class="bg">
+                        <el-menu-item index="3-1" class="bg">选项1</el-menu-item>
+                        <el-menu-item index="3-2" class="bg">选项2</el-menu-item>
+                        </el-menu-item-group>
+
+                        <el-menu-item index="3-3" class="bg">选项3</el-menu-item>
+                        </el-menu-item-group>
+
+                        <el-submenu index="3-4" class="bg">
+                        <template slot="title" class="bg">选项4</template>
+                        <el-menu-item index="3-4-1" class="bg">选项4-1</el-menu-item>
+                        </el-submenu>
+                </el-submenu>
+            </el-menu>	
+
+
+		</el-aside>
+  		<el-container>
+   		 <el-header>
+                <div><div>后台管理系统</div>
+                    <div class="headed_right">
+                        fdsafdsfsdff
+                        <i class="el-icon-setting"></i>
+                    </div>
+                </div>
+            </el-header>
+   		 <el-main>Main</el-main>
+ 	 	</el-container>
+	</el-container>
+  </div>
+</body>
+
+
+  <!-- 先引入 Vue -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function() {
+        return { visible: false }
+      },
+	  methods:{
+	    aa: function(){
+				console.log("dsdfsf")		
+		}
+	  }
+    })
+  </script>
+<style>
+  .el-header, .el-footer {
+    background-color: #2D2F33;
+    color:rgb(255,255,255);
+    text-align: left;
+	font-size:18px;
+	
+	
+    line-height: 52.5px;
+  }
+  
+  .el-aside {
+    background-color: #2D2F33;
+    
+    text-align: center;
+  }
+  
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 549px;
+  }
+  
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+  
+  .el-container:nth-child(5) .el-aside,
+  .el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+  }
+  
+  .el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+  }
+  .bg{
+	background: #2D2F33;
+	color:rgb(255,255,255);
+	}
+   .el-submenu__title{
+     color: white;
+     text-align:left;
+   }
+.el-menu-item.is-active{
+  color:#26507B;
+	background:#409EFF;
+}
+.el-submenu__title:hover{
+  background:green;
+}
+.img{
+    height:53px; 
+    margin-top:5px;
+    text-align:left;
+}
+
+
+	
+</style>
+
+</html>
+
